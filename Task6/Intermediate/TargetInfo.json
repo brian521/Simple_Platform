@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Task6",
+			"Path": "..\\Source\\Task6.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "Task6Editor",
+			"Path": "..\\Source\\Task6Editor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
