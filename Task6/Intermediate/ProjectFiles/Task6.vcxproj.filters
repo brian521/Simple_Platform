@@ -11,6 +11,7 @@
     <None Include="..\..\Source\Task6Editor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -37,6 +38,24 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\Task6\Task6.h">
       <Filter>Source\Task6</Filter>
+    </ClCompile>
+    <Filter Include="Source\Task6\Private">
+      <UniqueIdentifier>{B2ABD447-FD35-3884-AB25-3B9F3ED736B9}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Task6\Private\Actor_1.cpp">
+      <Filter>Source\Task6\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Task6\Private\Actor_2.cpp">
+      <Filter>Source\Task6\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\Task6\Public">
+      <UniqueIdentifier>{9799E79B-CED1-3179-9C5C-7D1336296B42}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Task6\Public\Actor_1.h">
+      <Filter>Source\Task6\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Task6\Public\Actor_2.h">
+      <Filter>Source\Task6\Public</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
