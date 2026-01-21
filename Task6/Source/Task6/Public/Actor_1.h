@@ -25,10 +25,21 @@ protected:
 	UStaticMeshComponent* StaticMeshComp;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor|Properties")
-	float RotationSpeed;
+	FVector RotationVector;  // 회전 벡터
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor|Properties")
-	FVector StartLocation;
+	FVector StartLocation; // 시작 좌표
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor|Properties")
+	float LocationRange; // 이동 범위
+
+	FTimerHandle TimerHandle;
+
+	// 랜덤 벡터 값 생성
+	FVector RandomVector();
+
+	// 랜덤 텔레포트
+	void MoveRandom();
 
 public:	
 	// Called every frame

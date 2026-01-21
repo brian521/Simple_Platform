@@ -25,13 +25,16 @@ protected:
 	UStaticMeshComponent* StaticMeshComp;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor|Properties")
-	float MoveSpeed;
+	FVector MoveVector; // 움직일 벡터 값
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor|Properties")
-	float MaxRange;
+	float MaxRange;  // 이동 제한 거리
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actor|Properties")
 	FVector StartLocation;
+
+	// 랜덤 벡터 생성
+	FVector RandomVector();
 
 public:	
 	// Called every frame

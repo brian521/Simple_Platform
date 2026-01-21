@@ -21,7 +21,7 @@ AActor_2::AActor_2()
 		StaticMeshComp->SetStaticMesh(MeshAsset.Object);
 	}
 
-	MoveSpeed = 20.0f;
+	MoveVector = FVector(0.0f, 20.0f, 0.0f);
 	MaxRange = 100.0f;
 	StartLocation = FVector(100.0f, 0.0f, 0.0f);
 }
@@ -30,7 +30,19 @@ AActor_2::AActor_2()
 void AActor_2::BeginPlay()
 {
 	Super::BeginPlay();
-	SetActorLocation(StartLocation);
+	//SetActorLocation(StartLocation);
+	StartLocation = GetActorLocation();
+	MoveVector = RandomVector();  // 이동할 벡터 랜덤 생성
+}
+
+FVector AActor_2::RandomVector()
+{
+	float RValueX, RValueY;
+
+	RValueX = FMath::RandRange(-30, 30);
+	RValueY = FMath::RandRange(-30, 30);
+
+	return FVector(RValueX, RValueY, 0.0f);
 }
 
 // Called every frame
@@ -38,13 +50,13 @@ void AActor_2::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (!FMath::IsNearlyZero(MoveSpeed))
+	if (!FMath::IsNearlyZero(MoveVector.X) || !FMath::IsNearlyZero(MoveVector.Y) || !FMath::IsNearlyZero(MoveVector.Z))
 	{
-		if (FVector::Dist(StartLocation, GetActorLocation()) >= MaxRange)
+		if (FVector::Dist(StartLocation, GetActorLocation()) >= MaxRange)  // 시작 좌표에서 일정 거리 벗어나면
 		{
-			MoveSpeed = -MoveSpeed;
+			MoveVector = -MoveVector;  // 이동 벡터를 반대로 전환
 		}
-		AddActorLocalOffset(FVector(0.0f, MoveSpeed * DeltaTime, 0.0f));
+		AddActorLocalOffset(MoveVector*DeltaTime);
 	}
 }
 

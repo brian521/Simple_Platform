@@ -39,18 +39,35 @@ struct Z_Construct_UClass_AActor_1_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/Actor_1.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RotationSpeed_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RotationVector_MetaData[] = {
 		{ "Category", "Actor|Properties" },
 		{ "ModuleRelativePath", "Public/Actor_1.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_StartLocation_MetaData[] = {
 		{ "Category", "Actor|Properties" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xed\x9a\x8c\xec\xa0\x84 \xeb\xb2\xa1\xed\x84\xb0\n" },
+#endif
 		{ "ModuleRelativePath", "Public/Actor_1.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xed\x9a\x8c\xec\xa0\x84 \xeb\xb2\xa1\xed\x84\xb0" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LocationRange_MetaData[] = {
+		{ "Category", "Actor|Properties" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xec\x8b\x9c\xec\x9e\x91 \xec\xa2\x8c\xed\x91\x9c\n" },
+#endif
+		{ "ModuleRelativePath", "Public/Actor_1.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xec\x8b\x9c\xec\x9e\x91 \xec\xa2\x8c\xed\x91\x9c" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_StaticMeshComp;
-	static const UECodeGen_Private::FFloatPropertyParams NewProp_RotationSpeed;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_RotationVector;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_StartLocation;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_LocationRange;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -59,12 +76,14 @@ struct Z_Construct_UClass_AActor_1_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AActor_1_Statics::NewProp_StaticMeshComp = { "StaticMeshComp", nullptr, (EPropertyFlags)0x002008000008080d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AActor_1, StaticMeshComp), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_StaticMeshComp_MetaData), NewProp_StaticMeshComp_MetaData) };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AActor_1_Statics::NewProp_RotationSpeed = { "RotationSpeed", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AActor_1, RotationSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RotationSpeed_MetaData), NewProp_RotationSpeed_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AActor_1_Statics::NewProp_RotationVector = { "RotationVector", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AActor_1, RotationVector), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RotationVector_MetaData), NewProp_RotationVector_MetaData) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AActor_1_Statics::NewProp_StartLocation = { "StartLocation", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AActor_1, StartLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_StartLocation_MetaData), NewProp_StartLocation_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AActor_1_Statics::NewProp_LocationRange = { "LocationRange", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AActor_1, LocationRange), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LocationRange_MetaData), NewProp_LocationRange_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AActor_1_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AActor_1_Statics::NewProp_StaticMeshComp,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AActor_1_Statics::NewProp_RotationSpeed,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AActor_1_Statics::NewProp_RotationVector,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AActor_1_Statics::NewProp_StartLocation,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AActor_1_Statics::NewProp_LocationRange,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AActor_1_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AActor_1_Statics::DependentSingletons[])() = {
@@ -107,10 +126,10 @@ AActor_1::~AActor_1() {}
 struct Z_CompiledInDeferFile_FID_Users_user_Desktop_NBC_Simple_Platform_Task6_Source_Task6_Public_Actor_1_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AActor_1, AActor_1::StaticClass, TEXT("AActor_1"), &Z_Registration_Info_UClass_AActor_1, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AActor_1), 3183992483U) },
+		{ Z_Construct_UClass_AActor_1, AActor_1::StaticClass, TEXT("AActor_1"), &Z_Registration_Info_UClass_AActor_1, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AActor_1), 1632731582U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_user_Desktop_NBC_Simple_Platform_Task6_Source_Task6_Public_Actor_1_h_214606395(TEXT("/Script/Task6"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_user_Desktop_NBC_Simple_Platform_Task6_Source_Task6_Public_Actor_1_h_2431690527(TEXT("/Script/Task6"),
 	Z_CompiledInDeferFile_FID_Users_user_Desktop_NBC_Simple_Platform_Task6_Source_Task6_Public_Actor_1_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_user_Desktop_NBC_Simple_Platform_Task6_Source_Task6_Public_Actor_1_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -6,7 +6,8 @@
 			"description": "Default Uncontrolled Changelist",
 			"files": [
 				"C:/Users/user/Desktop/NBC/Simple_Platform/Task6/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset",
-				"C:/Users/user/Desktop/NBC/Simple_Platform/Task6/Content/Maps/L_Main.umap"
+				"C:/Users/user/Desktop/NBC/Simple_Platform/Task6/Content/Maps/L_Main.umap",
+				"C:/Users/user/Desktop/NBC/Simple_Platform/Task6/Content/Blueprints/MyActor_1.uasset"
 			]
 		}
 	]

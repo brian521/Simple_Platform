@@ -48,6 +48,9 @@
     <ClCompile Include="..\..\Source\Task6\Private\Actor_2.cpp">
       <Filter>Source\Task6\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Task6\Private\Spawner.cpp">
+      <Filter>Source\Task6\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\Task6\Public">
       <UniqueIdentifier>{9799E79B-CED1-3179-9C5C-7D1336296B42}</UniqueIdentifier>
     </Filter>
@@ -55,6 +58,9 @@
       <Filter>Source\Task6\Public</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Task6\Public\Actor_2.h">
+      <Filter>Source\Task6\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Task6\Public\Spawner.h">
       <Filter>Source\Task6\Public</Filter>
     </ClCompile>
   </ItemGroup>

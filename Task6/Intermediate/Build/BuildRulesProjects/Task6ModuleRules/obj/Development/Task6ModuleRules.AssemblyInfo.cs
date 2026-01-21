@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Task6ModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9416422799987701013231b96df651afb8e202b3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0d6118307198c95645ab65f6b220924a098b719")]
 [assembly: System.Reflection.AssemblyProductAttribute("Task6ModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Task6ModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
